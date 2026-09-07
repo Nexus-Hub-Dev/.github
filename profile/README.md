@@ -36,7 +36,7 @@ Criar um ambiente colaborativo onde possamos:
 <div align="center">
 
 | Área                   | Tecnologias                     |
-| ---------------------- | ------------------------------- |
+| ---------------------- | -------------------------------- |
 | ☕ **Backend**          | Java • Spring Boot • APIs REST  |
 | ⚛️ **Frontend**        | React • TypeScript • JavaScript |
 | 🗄️ **Banco de Dados** | MySQL • PostgreSQL              |
@@ -90,11 +90,13 @@ Aplicação de delivery desenvolvida para praticar desenvolvimento frontend, com
 
 ---
 
-## 📈 Estatísticas
+## 📈 Atividade combinada da organização
+
+Este gráfico soma os commits de **todos os repositórios não arquivados** da Nexus Hub Dev, dia a dia, nas últimas 52 semanas. Ele é atualizado automaticamente todo dia pelo workflow `org-activity.yml`.
 
 <div align="center">
 
-<img src="./stats.svg" width="450" alt="Estatísticas do GitHub">
+<img src="./org-activity.svg" width="100%" alt="Atividade agregada de todos os repositórios da organização">
 
 </div>
 
@@ -139,16 +141,6 @@ Explore nossos repositórios e participe dos projetos.
 ⬇️
 
 ### 🎯 Evoluir
-
-</div>
-
----
-
-## 🐍 Contribution Snake
-
-<div align="center">
-
-<img src="https://raw.githubusercontent.com/Nexus-Hub-Dev/Nexus-Hub-Dev/output/github-contribution-grid-snake.svg" width="100%" alt="GitHub Contribution Snake">
 
 </div>
 
