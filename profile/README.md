@@ -85,10 +85,9 @@ Aplicação de delivery desenvolvida para praticar conceitos de desenvolvimento 
 
 <div align="center">
 
-<img src="https://github-readmeapp.vercel.app/api/top-langs/?username=Nexus-Hub-Dev&layout=donut&theme=transparent&hide_border=true&title_color=58A6FF&text_color=c9d1d9" alt="Linguagens mais utilizadas"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Nexus-Hub-Dev&layout=donut&theme=github_dark&hide_border=true&langs_count=8" alt="Linguagens mais utilizadas">
 
 </div>
-
 ---
 
 ## 📈 Atividade da organização
