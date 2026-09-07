@@ -82,9 +82,11 @@ Aplicação de delivery desenvolvida para praticar desenvolvimento frontend, com
 
 ## 📊 Linguagens mais utilizadas
 
+Soma dos bytes de código de todos os repositórios não arquivados da organização, gerado pelo mesmo workflow.
+
 <div align="center">
 
-<img src="./top-langs.svg" width="450" alt="Linguagens mais utilizadas">
+<img src="./top-langs.svg" width="450" alt="Linguagens mais utilizadas em toda a organização">
 
 </div>
 
