@@ -63,7 +63,8 @@ function renderSvg(entries, totalBytes) {
   const rowGap = 26;
   const padding = 20;
   const labelWidth = 110; // espaço reservado pro nome da linguagem
-  const pctWidth = 48;    // espaço reservado pra porcentagem, fora da barra
+  const pctWidth = 66;    // espaço reservado pra porcentagem, fora da barra
+  const trackGap = 6;     // folga extra entre o fim da trilha e o texto
   const trackX = padding + labelWidth;
   const trackWidth = width - padding * 2 - labelWidth - pctWidth;
   const height = padding * 2 + entries.length * rowGap;
@@ -71,14 +72,18 @@ function renderSvg(entries, totalBytes) {
   let rows = "";
   entries.forEach(([lang, bytes], i) => {
     const pct = ((bytes / totalBytes) * 100).toFixed(1);
-    const barWidth = Math.max(2, (bytes / entries[0][1]) * trackWidth);
+    // nunca deixa a barra colorida encostar no fim da trilha
+    const barWidth = Math.min(
+      trackWidth - trackGap,
+      Math.max(2, (bytes / entries[0][1]) * trackWidth)
+    );
     const y = padding + i * rowGap;
     const color = COLORS[lang] || FALLBACK;
     rows += `
     <text x="${padding}" y="${y + barHeight}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">${lang}</text>
     <rect x="${trackX}" y="${y}" width="${trackWidth}" height="${barHeight}" rx="4" fill="#21262d"/>
     <rect x="${trackX}" y="${y}" width="${barWidth}" height="${barHeight}" rx="4" fill="${color}"/>
-    <text x="${width - padding}" y="${y + barHeight}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#8b949e" text-anchor="end">${pct}%</text>`;
+    <text x="${trackX + trackWidth + trackGap}" y="${y + barHeight}" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">${pct}%</text>`;
   });
 
   return `<svg xmlns="http://www.w3.org/2000/svg" width="${width}" height="${height}" viewBox="0 0 ${width} ${height}" role="img" aria-label="Linguagens mais usadas na organizacao">
