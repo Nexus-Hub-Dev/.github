@@ -1,4 +1,4 @@
-name: Org Activity Graph
+name: Org Stats (atividade + linguagens)
 
 on:
   schedule:
@@ -30,10 +30,27 @@ jobs:
           GH_TOKEN: ${{ secrets.ORG_PAT || secrets.GITHUB_TOKEN }}
         run: node scripts/org-activity.mjs
 
-      - name: Commitar SVG gerado
+      - name: Gerar gráfico de linguagens agregado
+        env:
+          ORG: Nexus-Hub-Dev
+          GH_TOKEN: ${{ secrets.ORG_PAT || secrets.GITHUB_TOKEN }}
+        run: node scripts/org-top-langs.mjs
+
+      - name: Conferir arquivos gerados
+        run: |
+          echo "Conteúdo de profile/ após a geração:"
+          ls -la profile/
+          echo "--- tamanho dos arquivos ---"
+          wc -c profile/org-activity.svg profile/top-langs.svg
+
+      - name: Commitar SVGs gerados
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "github-actions[bot]@users.noreply.github.com"
-          git add profile/org-activity.svg
-          git diff --cached --quiet || git commit -m "chore: atualiza atividade agregada da organização"
-          git push
+          git add profile/org-activity.svg profile/top-langs.svg
+          if git diff --cached --quiet; then
+            echo "Nada mudou, nada para commitar."
+          else
+            git commit -m "chore: atualiza atividade e linguagens da organização"
+            git push
+          fi
