@@ -1,0 +1,39 @@
+name: Org Activity Graph
+
+on:
+  schedule:
+    - cron: "0 3 * * *"   # todo dia às 03:00 UTC (00:00 em Brasília)
+  workflow_dispatch:        # permite rodar manualmente pela aba Actions
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Gerar heatmap agregado da organização
+        env:
+          ORG: Nexus-Hub-Dev
+          # Se a org tiver repositórios PRIVADOS, crie um secret ORG_PAT
+          # (fine-grained: Contents=Read, Metadata=Read, em todos os repos da org)
+          # e salve em: Settings > Secrets and variables > Actions.
+          # Se for tudo público, o GITHUB_TOKEN padrão já resolve.
+          GH_TOKEN: ${{ secrets.ORG_PAT || secrets.GITHUB_TOKEN }}
+        run: node scripts/org-activity.mjs
+
+      - name: Commitar SVG gerado
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add profile/org-activity.svg
+          git diff --cached --quiet || git commit -m "chore: atualiza atividade agregada da organização"
+          git push
