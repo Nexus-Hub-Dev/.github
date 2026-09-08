@@ -1,28 +1,15 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="480" height="196" viewBox="0 0 480 196" role="img" aria-label="Linguagens mais usadas na organizacao">
-  <rect width="100%" height="100%" rx="8" fill="transparent"/>
+
+    <svg width="576.5"  height="120" viewBox="0 0 576.5 120" fill="#0D1117" xmlns="http://www.w3.org/2000/svg">
+    <style>
+    .text { font: 600 16px 'Segoe UI', Ubuntu, Sans-Serif; fill: #58A6FF }
+    .small { font: 600 12px 'Segoe UI', Ubuntu, Sans-Serif; fill: #C3D1D9 }
+    .gray { fill: #858585 }
+    </style>
+    <rect x="0.5" y="0.5" width="575.5" height="99%" rx="4.5" fill="#0D1117" stroke="#e4e2e2"/>
+    <text x="25" y="45" class="text">Something went wrong! file an issue at https://tinyurl.com/github-stats</text>
+    <text data-testid="message" x="25" y="55" class="text small">
+      <tspan x="25" dy="18">Could not resolve to a User with the login of &#39;Nexus-Hub-Dev&#39;.</tspan>
+      <tspan x="25" dy="18" class="gray">Make sure the provided username is not an organization</tspan>
+    </text>
+    </svg>
   
-    <text x="20" y="30" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">Java</text>
-    <rect x="130" y="20" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="20" width="258" height="10" rx="4" fill="#b07219"/>
-    <text x="400" y="30" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">48.2%</text>
-    <text x="20" y="56" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">TypeScript</text>
-    <rect x="130" y="46" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="46" width="230.51062813470264" height="10" rx="4" fill="#3178c6"/>
-    <text x="400" y="56" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">42.1%</text>
-    <text x="20" y="82" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">JavaScript</text>
-    <rect x="130" y="72" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="72" width="30.081681394793407" height="10" rx="4" fill="#f1e05a"/>
-    <text x="400" y="82" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">5.5%</text>
-    <text x="20" y="108" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">CSS</text>
-    <rect x="130" y="98" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="98" width="16.852161452113688" height="10" rx="4" fill="#563d7c"/>
-    <text x="400" y="108" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">3.1%</text>
-    <text x="20" y="134" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">Dockerfile</text>
-    <rect x="130" y="124" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="124" width="3.4248865536183426" height="10" rx="4" fill="#384d54"/>
-    <text x="400" y="134" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">0.6%</text>
-    <text x="20" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="13" fill="#c9d1d9">HTML</text>
-    <rect x="130" y="150" width="264" height="10" rx="4" fill="#21262d"/>
-    <rect x="130" y="150" width="2.9691903510866973" height="10" rx="4" fill="#e34c26"/>
-    <text x="400" y="160" font-family="Segoe UI, Ubuntu, sans-serif" font-size="12" fill="#c9d1d9">0.5%</text>
-</svg>
